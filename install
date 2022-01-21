@@ -25,10 +25,10 @@ DIR="~/.config/lxsession/LXDE-pi/autostart";
 DIR="/etc/xdg/lxsession/LXDE-pi/autostart";
 
 # add line to lxsession autostart, if it does not already exist
-if ! grep -q "pi-battery-widget" "$DIR"
+if ! sudo grep -q "pi-battery-widget" "$DIR"
 then
     #cp ~/.config/lxsession/LXDE-pi/autostart ./lxsession_LXDE-pi_autostart.`date +%Y%m%d%H%M%S`
-    echo "@pi-battery-widget > /dev/null &" >> "$DIR"
+    sudo echo "@pi-battery-widget > /dev/null &" >> "$DIR"
 fi
 
 #restart gtk_battery in background making sure that it lives on if calling console is closed

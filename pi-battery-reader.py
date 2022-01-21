@@ -20,7 +20,14 @@ def readCapacity(bus):
         address = 0x41
         #read = bus.read_word_data(address, 4)
         #swapped = struct.unpack("<H", struct.pack(">H", read))[0]
-        capacity = bus.read_byte(address)
+        success=False
+        tries=0
+        while not success:
+                try:
+                        capacity = bus.read_byte(address)
+                        success = True
+                except:
+                        tries+=1
         return capacity
 
 
