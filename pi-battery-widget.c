@@ -61,8 +61,8 @@
 #define INTERVAL		5000	// msec between two updates
 
 #define MAKELOG         1     // log file batteryLog in home directory (0 = no log file)
-#define MAX_CHARGED_VOLTAGE 4.18000 //4.21625
-#define CUTOFF_VOLTAGE 2.4
+#define MAX_CHARGED_VOLTAGE 8.4 //4.21625
+#define CUTOFF_VOLTAGE  5
 
 //for rough charge/discharge time estimation
 #define CELL_CAPACITY 3400 //mAh
